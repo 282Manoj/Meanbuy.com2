@@ -148,6 +148,7 @@
     height: 60px;
     border: 1px solid orange;
     background-color: orange;
+    cursor: pointer;
   }
 
   #one>div:nth-child(4)>a {
@@ -170,7 +171,7 @@
       </div>
       <div>
         <p>MeanBuy</p>
-        <p>₹ 1,999</p>
+        <p id="price1">₹ 1,999</p>
       </div>
     </div>
     <div>
@@ -199,9 +200,18 @@
       <a id="id" href="">Know More</a>
     </div>
     <div>
-      <p>PAY ₹1,499</p>
+      <p id="pri1">Pay</p>
     </div>
   </div>
 </body>
 
 </html>
+<script>
+  let price = JSON.parse(localStorage.getItem("carttotal")) || [];
+  document.querySelector("#price1").innerText = price;
+  document.querySelector("#pri1").addEventListener("click", function () {
+    alert("Order Placed continue shopping!");
+    window.location.href = "nav+home.html";
+  });
+
+</script>
