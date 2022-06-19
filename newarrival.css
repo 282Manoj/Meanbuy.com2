@@ -28,6 +28,9 @@ margin-left: 20px;
 #upper>div:first-child>img{
 height: 90%;
 }
+#upper>div:first-child>img:hover{
+   cursor:pointer;
+}
 #upper>div:last-child{
 display: flex;
 }
@@ -130,4 +133,12 @@ color:#68686f;
    color: #008a00;
    font-size: 14px;
    font-weight:100;
+}
+a{
+   text-decoration: none;
+   color:black;
+}
+a:hover{
+   cursor:pointer;
+   color: red;
 }
