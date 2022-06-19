@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #one {
+    width: 27%;
+    height: 640px;
+    border: 0.5px solid orange;
+    margin: auto;
+  }
+
+  #one>div:nth-child(1) {
+    height: 110px;
+    border: 1px solid none;
+    background-color: #e89837;
+    display: flex;
+  }
+
+  #one>div:nth-child(1)>div:nth-child(1) {
+    width: 22%;
+    height: 78px;
+    margin-left: 17px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 1px solid none;
+    background-color: #fff;
+  }
+
+  #one>div:nth-child(1)>div:nth-child(1)>img {
+    width: 85%;
+    height: 110%;
+    margin-left: 10px;
+  }
+
+  #one>div:nth-child(1)>div:nth-child(2) {
+    width: 70%;
+    border: 1px solid none;
+
+  }
+
+  #one>div:nth-child(1)>div:nth-child(2)>p:nth-child(1) {
+    font-size: 19px;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    margin-left: 12px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  #one>div:nth-child(1)>div:nth-child(2)>p:nth-child(2) {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    margin-left: 18px;
+    margin-top: 5px;
+  }
+
+  #one>div:nth-child(2) {
+    height: 33px;
+    background-color: #d3903e;
+  }
+
+  #one>div:nth-child(2)>select {
+    height: 33px;
+    margin-left: 10px;
+    padding: 7px;
+    background-color: #d3903e;
+    color: white;
+    border: none;
+    font-size: 15px;
+  }
+
+  #one>div:nth-child(3) {
+    height: 380px;
+    border: 1px solid none;
+    background-color: #fff;
+
+  }
+
+  #one>div:nth-child(3)>div {
+    width: 100%;
+    height: 150px;
+    border: 1px solid none;
+    display: flex;
+  }
+
+  #one>div:nth-child(3)>div>div:nth-child(1) {
+    width: 65%;
+    height: 150px;
+    border: 1px solid none;
+
+  }
+
+
+  #one>div:nth-child(3)>p {
+    margin-top: 55px;
+    margin-left: 18px;
+    font-size: 16px;
+  }
+
+  #one>div:nth-child(3)>div>div:nth-child(1)>input {
+    width: 75%;
+    margin-left: 14px;
+    margin-top: 30px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid darkgray;
+  }
+
+  #one>div:nth-child(3)>div>div:nth-child(2) {
+    width: 35%;
+    height: 150px;
+    border: 1px solid none;
+  }
+
+  #one>div:nth-child(3)>div>div:nth-child(2)>input {
+    width: 60%;
+    margin-left: 14px;
+    margin-top: 30px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid darkgray;
+  }
+
+  #one>div:nth-child(3)>input {
+    margin-left: 14px;
+    background-color: brown;
+  }
+
+  #one>div:nth-child(3)>a {
+    color: black;
+    text-decoration: none;
+  }
+
+  #one>div:nth-child(3)>a:last-child {
+    color: blue;
+    margin-left: 35px;
+    text-decoration: double;
+  }
+
+  #one>div:nth-child(4) {
+    height: 60px;
+    border: 1px solid orange;
+    background-color: orange;
+  }
+
+  #one>div:nth-child(4)>a {
+    text-decoration: none;
+  }
+
+  #one>div:nth-child(4)>p {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 19px;
+    text-decoration: none;
+  }
+</style>
+
+<body>
+  <div id="one">
+    <div>
+      <div>
+        <img src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png" alt="">
+      </div>
+      <div>
+        <p>MeanBuy</p>
+        <p>₹ 1,999</p>
+      </div>
+    </div>
+    <div>
+      <select name="" id="se1">
+        <option value="">English</option>
+        <option value="">maradi</option>
+      </select>
+    </div>
+    <div>
+      <p>Add New Card</p>
+      <div>
+        <div>
+          <input type="text" placeholder="Card Number">
+          <input type="text" placeholder="Card Holder's Number">
+        </div>
+        <div>
+          <input type="text" placeholder="Expriy">
+          <input type="text" placeholder="CVV">
+        </div>
+      </div>
+      <input type="checkbox" id="che">
+      <a href="">Save card securely for future payments
+      </a>
+      <br>
+      <br>
+      <a id="id" href="">Know More</a>
+    </div>
+    <div>
+      <p>PAY ₹1,499</p>
+    </div>
+  </div>
+</body>
+
+</html>
