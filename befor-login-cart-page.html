@@ -541,4 +541,7 @@ console.log(tr1)
 });
 }
 itemdata(catrtdata);
+let totalcart= JSON.parse(localStorage.getItem("carttotal"))|| [];
+document.querySelector(".subtotalcart").innerText=totalcart
+
 </script>
