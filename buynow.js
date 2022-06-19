@@ -35,4 +35,18 @@ function display(cartArr){
      document.querySelector(".now+p>span").innerText=carttotal;
      document.querySelector(".simplepay_amount").innerText=carttotal-1000;
 
+
 }
+let userData=JSON.parse(localStorage.getItem("userData")) || [];
+   let userName=[];
+   userName.push(userData)
+   console.log(userName);
+   userData.forEach(function(elem){
+        let p=document.createElement("p");
+        p.innerText=elem.email;
+        document.querySelector("#Guest").innerText=elem.email;
+   })
+   
+   document.querySelector("#placeorder").addEventListener("click",function(){
+    window.location.href="lastpage.html"
+    })
