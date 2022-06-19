@@ -455,7 +455,7 @@
             <p style="color: #f98d29">COD Fee ₹0</p>
           </div>
           <p style="margin-top: 20px; margin-left: 10px">
-            Toatal: <span>₹9499.00</span>
+            Toatal: <span id="subtotalcart2">₹9499.00</span>
           </p>
           <div class="simplepay">
             Or 3 interest free payments of
@@ -543,6 +543,13 @@ console.log(tr1)
 itemdata(catrtdata);
 let totalcart= JSON.parse(localStorage.getItem("carttotal"))|| [];
 document.querySelector(".subtotalcart").innerText=totalcart
+
+let totalcart2= JSON.parse(localStorage.getItem("carttotal"))|| [];
+document.querySelector("#subtotalcart2").innerText=totalcart2
+
+let totalcart3= JSON.parse(localStorage.getItem("carttotal"))|| [];
+document.querySelector(".simplepay_amount").innerText=totalcart3
+
 document.querySelector("#placeorder").addEventListener("click",function(){
 window.location.href="lastpage.html"
 })
