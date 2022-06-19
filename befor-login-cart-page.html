@@ -420,7 +420,7 @@
             <h4>simple pay</h4>
           </div>
         </div>
-        <button>PLACE ORDER</button>
+        <button id="placeorder">PLACE ORDER</button>
       </div>
       <div id="right">
         <table id="cart_checkout" width="100%" cellspacing="0" cellpadding="0">
@@ -543,5 +543,7 @@ console.log(tr1)
 itemdata(catrtdata);
 let totalcart= JSON.parse(localStorage.getItem("carttotal"))|| [];
 document.querySelector(".subtotalcart").innerText=totalcart
-
+document.querySelector("#placeorder").addEventListener("click",function(){
+window.location.href="lastpage.html"
+})
 </script>
