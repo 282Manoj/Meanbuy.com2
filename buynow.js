@@ -46,7 +46,6 @@ let userData=JSON.parse(localStorage.getItem("userData")) || [];
         p.innerText=elem.email;
         document.querySelector("#Guest").innerText=elem.email;
    })
-   
    document.querySelector("#placeorder").addEventListener("click",function(){
     window.location.href="lastpage.html"
     })
