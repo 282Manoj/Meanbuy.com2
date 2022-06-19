@@ -232,3 +232,7 @@
     margin:25px auto;
     background-color: #f98d29;
   }
+
+  #placeorder:hover{
+   cursor:pointer;
+  }
