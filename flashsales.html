@@ -42,6 +42,7 @@
     height: 25px;
     width: 300px;
     margin-left: 20px;
+    border: 1px solid black;
   }
 
   #upper>div:first-child>img {
@@ -328,7 +329,7 @@
 
   #box {
     display: flex;
-
+    padding: 20px;
     background-color: #f2f2f2;
   }
 
@@ -399,28 +400,46 @@
     height: 30px;
     width: 60px;
   }
+
+  a {
+    text-decoration: none;
+    color: rgb(94, 90, 90);
+    cursor: pointer;
+  }
+
+  #main23 {
+    cursor: pointer;
+  }
+
+  #cart {
+    cursor: pointer;
+  }
 </style>
 
 <body>
   <div id="nav">
     <div id="upper">
       <div>
-        <img src="https://d64lkarmo2mrq.cloudfront.net/baselogo.png" alt="logo">
+        <img id="main23" src="https://d64lkarmo2mrq.cloudfront.net/baselogo.png" alt="logo">
         <input type="text" placeholder="Search">
       </div>
       <div>
         <div>
           <div>
-            <p>LOGIN</p>
+            <a href="signin.html">
+              <p>LOGIN</p>
+            </a>
             <p>/</p>
-            <p>SIGNUP</p>
+            <a href="index.html">
+              <p>SIGNUP</p>
+            </a>
           </div>
           <div>
             <p>WELCOME GUEST</p>
           </div>
         </div>
         <div>
-          <img src="https://cdn-icons-png.flaticon.com/512/211/211170.png" alt="cart">
+          <img id="cart" src="https://cdn-icons-png.flaticon.com/512/211/211170.png" alt="cart">
         </div>
       </div>
     </div>
@@ -430,11 +449,21 @@
         <option value="mens">Mens</option>
         <option value="womens">Womens</option>
       </select>
-      <p>Flash Sale</p>
-      <p>Best Deals</p>
-      <p>Shop By Brand</p>
-      <p>Trending</p>
-      <p>New Arrivals</p>
+      <a href="flashsales.html">
+        <p>Flash Sale</p>
+      </a>
+      <a href="">
+        <p>Best Deals</p>
+      </a>
+      <a href="">
+        <p>Shop By Brand</p>
+      </a>
+      <a href="Tranding.html">
+        <p>Trending</p>
+      </a>
+      <a href="newarrival.html">
+        <p>New Arrivals</p>
+      </a>
     </div>
   </div>
   <div id="first">
@@ -464,12 +493,12 @@
           </div> -->
           <select id="main"
             style="width: 100%; height: 33px; border: 1px solid rgb(197, 194, 194); font-size: 18px;color: rgb(105, 102, 102); background-color: #fff;">
-            <option value="">What's New</option>
-            <option value="">Featured items</option>
-            <option value=""><a href="">Trending items</a></option>
-            <option value=""><a href="">Price</a></option>
-            <option id="hol12" value="">High To Low</option>
-            <option value="">Low To High</option>
+            <option value="What's New">What's New</option>
+            <option value="Featured items">Featured items</option>
+            <option value="Trending items">Trending items</option>
+            <option value="Price">Price</option>
+            <option value="High To Low">High To Low</option>
+            <option value="Low To High">Low To High</option>
 
           </select>
           <!-- <i class=" fa-solid fa-angle-down" style="margin-top: 2px; margin-right: 15px; font-size: 27px;"></i> -->
@@ -537,57 +566,63 @@
 </html>
 <script>
   let arr = [
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg4XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹4,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMDg5XC9QaW5rX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19", p: "Double-Sided MIrror", bu: "4.5/5★", price: "₹8,99", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxOTU3XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "Soap Dispenser & Holder", bu: "4.5/6★", price: "₹1,499", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxOTA1XC9Hb2xkX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19", p: "Hanging Candle Holder", bu: "4.8/5★", price: "₹1,299", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODM5XC9HcmVlbl9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "European Tea Set", bu: "4.6/5★", price: "₹5,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODExXC9Hb2xkX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19", p: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹4,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxNDU2XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "Ceramic 6 Cups Set", bu: "4.6/5★", price: "₹4,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzY4XC9CbGFja19uXzFfMS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMjAsImhlaWdodCI6MzIwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=", p: "IWO W!& SmartWatch", bu: "4.3/5★", price: "₹2,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTU3XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "LOKMAT Attack Smart Watch", bu: "2.9/5★", price: "₹4,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTM4XC9XaGl0ZV9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "Xiamoi Mi Monitor Light Bar", bu: "3.8/5★", price: "₹5,499", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMDA0XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "Xiaomi Mi Smart Scale", bu: "4.8/5★", price: "₹5,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjI3NjYyXC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "Xiaomi Mi Smart Antibacterial Humidier", bu: "4.4/5★", price: "₹6,499", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjI3NDE4XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹4,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjI3NDMzXC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹4,999", pe: "FREE SHOPING" },
-    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjIwNDQxXC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", p: "zablaze Strateos 2 Smartwatch", bu: "4.5/★", price: "₹4,999", pe: "FREE SHOPING" },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMzg4XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹4,999", pe: "FREE SHOPING", price2: 4999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMyMDg5XC9QaW5rX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19", name: "Double-Sided MIrror", bu: "4.5/5★", price: "₹8,99", pe: "FREE SHOPING", price2: 899 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxOTU3XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "Soap Dispenser & Holder", bu: "4.5/6★", price: "₹1,499", pe: "FREE SHOPING", price2: 1499 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxOTA1XC9Hb2xkX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19", name: "Hanging Candle Holder", bu: "4.8/5★", price: "₹1,299", pe: "FREE SHOPING", price2: 1299 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODM5XC9HcmVlbl9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "European Tea Set", bu: "4.6/5★", price: "₹5,999", pe: "FREE SHOPING", price2: 5999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxODExXC9Hb2xkX25fMV8xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzIwLCJoZWlnaHQiOjMyMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19", name: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹4,999", pe: "FREE SHOPING", price2: 4999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxNDU2XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "Ceramic 6 Cups Set", bu: "4.6/5★", price: "₹4,999", pe: "FREE SHOPING", price2: 4999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMzY4XC9CbGFja19uXzFfMS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMjAsImhlaWdodCI6MzIwLCJmaXQiOiJjb250YWluIiwiYmFja2dyb3VuZCI6eyJyIjoyNTUsImciOjI1NSwiYiI6MjU1LCJhbHBoYSI6MX19fX0=", name: "IWO W!& SmartWatch", bu: "4.3/5★", price: "₹2,999", pe: "FREE SHOPING", price2: 2999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTU3XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "LOKMAT Attack Smart Watch", bu: "2.9/5★", price: "₹4,999", pe: "FREE SHOPING", price2: 4999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMTM4XC9XaGl0ZV9uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "Xiamoi Mi Monitor Light Bar", bu: "3.8/5★", price: "₹5,499", pe: "FREE SHOPING", price2: 5499 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMDA0XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "Xiaomi Mi Smart Scale", bu: "4.8/5★", price: "₹5,999", pe: "FREE SHOPING", price2: 5999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjI3NjYyXC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "Xiaomi Mi Smart Antibacterial Humidier", bu: "4.4/5★", price: "₹6,499", pe: "FREE SHOPING", price2: 6499 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjI3NDE4XC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹2,999", pe: "FREE SHOPING", price2: 2999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjI3NDMzXC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "zablaze Strateos 2 Smartwatch", bu: "4.5/5★", price: "₹3,999", pe: "FREE SHOPING", price2: 3999 },
+    { img: "https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjIwNDQxXC9CbGFja19uXzFfMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMyMCwiaGVpZ2h0IjozMjAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==", name: "zablaze Strateos 2 Smartwatch", bu: "4.5/★", price: "₹1,999", pe: "FREE SHOPING", price2: 1999 }
   ]
 
   document.querySelector("#main").addEventListener("change", myfun)
-  display(arr);
+  // console.log(arr)
   function myfun() {
-    let p = document.querySelector("#hol12").innerHTML
+
+    let p = document.querySelector("#main").value;
     console.log(p);
 
-    if (p == "High To Low") {
+    if (p === "Low To High") {
+      document.querySelector("#maon").innerHTML = "";
       arr.sort(function (a, b) {
-        if (a.price > b.price) return 1
-        if (a.price < b.price) return -1
-        return 0
+        if (a.price2 > b.price2) return 1
+        if (a.price2 < b.price2) return -1
+        return 0;
       })
       console.log(arr);
       display(arr)
     }
-    if (p == "Low To High") {
+    else if (p === "High To Low") {
+      document.querySelector("#maon").innerHTML = "";
       arr.sort(function (a, b) {
-        if (a.price > b.price) return -1
-        if (a.price < b.price) return 1
+        if (a.price2 > b.price2) return -1
+        if (a.price2 < b.price2) return 1
         return 0
       })
       console.log(arr);
-      display(arr)
+      display(arr);
     }
     else {
+      document.querySelector("#maon").innerHTML = "";
       display(arr)
     }
 
 
   }
-  //
+  display(arr);
   function display(arr) {
     arr.forEach(function (ele) {
+      // document.querySelector("#maon").innerHTML = "";
       let mai = document.createElement("div");
+      mai.setAttribute("id", "hor")
       let imgs = document.createElement("img")
       imgs.setAttribute("src", ele.img)
       let l1 = document.createElement("div");
@@ -597,18 +632,27 @@
       let rat = document.createElement("p");
       rat.innerText = ele.pe;
       let p1 = document.createElement("p");
-      p1.innerText = ele.p;
+      p1.innerText = ele.name;
       let bu1 = document.createElement("div");
       bu1.innerText = ele.bu;
-      l1.append(p1, bu1)
-      l2.append(pri, rat)
+      l1.append(p1, bu1);
+      l2.append(pri, rat);
       mai.append(imgs, l1, l2)
+      imgs.addEventListener("click", function () {
+        localStorage.setItem("product", JSON.stringify(ele));
+        window.location.href = "pr.html";
+        console.log(imgs)
+      })
       document.querySelector("#maon").append(mai)
     })
-
   }
-
   localStorage.setItem("datqa", JSON.stringify(arr));
+  document.querySelector("#cart").addEventListener("click", function () {
+    window.location.href = "cart.html"
+  })
+  document.querySelector("#main23").addEventListener("click", function () {
+    window.location.href = "nav+home.html"
+  })
 
 
 </script>
